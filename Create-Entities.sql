@@ -1,3 +1,7 @@
+--Executar script a script de cima a baixo
+
+CREATE DATABASE Citel;
+
 CREATE TABLE Categorias
 (
 	CategoriaId INT IDENTITY(1,1) PRIMARY KEY,
