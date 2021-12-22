@@ -77,6 +77,7 @@ namespace Citel.WebApi.Controllers
                          {
                              ProdutoId = y.ProdutoId,
                              Nome = y.Nome,
+                             Preco = y.Preco,
                              Descricao = y.Descricao,
                              CategoriaId = y.CategoriaId,
                              Categoria = new Categorias()
