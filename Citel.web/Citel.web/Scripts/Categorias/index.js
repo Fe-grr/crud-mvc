@@ -40,7 +40,7 @@ function getbyID(CategoriaId) {
         contentType: "application/json;charset=UTF-8",
         dataType: "json",
         success: function (result) {
-            $('#myModalLabel')[0].innerText = "Editar Produto";
+            $('#myModalLabel')[0].innerText = "Editar Categoria";
             $('#CategoriaId').val(result.CategoriaId);
             $('#Nome').val(result.Nome);
 
@@ -96,7 +96,7 @@ function Update() {
 }
 
 function Delete(ID) {
-    var ans = confirm("Tem certeza que gostaria de excluir este produto?");
+    var ans = confirm("Tem certeza que gostaria de excluir essa categoria?");
     if (ans) {
         $.ajax({
             url: "Categorias/Delete?ID=" + ID,
