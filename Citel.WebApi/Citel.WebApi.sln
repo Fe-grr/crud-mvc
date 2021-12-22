@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Citel.WebApi", "Citel.WebApi\Citel.WebApi.csproj", "{14AE2499-0C74-4EA4-9EBE-AE68E6D9A97B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14AE2499-0C74-4EA4-9EBE-AE68E6D9A97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14AE2499-0C74-4EA4-9EBE-AE68E6D9A97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14AE2499-0C74-4EA4-9EBE-AE68E6D9A97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14AE2499-0C74-4EA4-9EBE-AE68E6D9A97B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {013EC6B3-8A9E-4553-A87A-417BFD7800E2}
+	EndGlobalSection
+EndGlobal

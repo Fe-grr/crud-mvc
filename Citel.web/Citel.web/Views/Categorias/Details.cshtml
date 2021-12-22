@@ -1,0 +1,26 @@
+﻿@model Citel.web.Models.CategoriaViewModel
+
+@{
+    ViewBag.Title = "Categoria | Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>CategoriaViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CategoriaId }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

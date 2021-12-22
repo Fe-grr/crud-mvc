@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Citel.web.Models.ProdutoViewModel>
+
+@{
+    ViewBag.Title = "Citel | Produtos";
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/Produtos/index.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    <h2>Cadastro Produtos</h2>
+    <button type="button" class="btn btn-primary open" data-toggle="modal" data-target="#myModal" onclick="preparaModel();">Adicionar novo produto</button><br /><br />
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Preço
+                </th>
+                <th>
+                    Descrição
+                </th>
+                <th>
+                    Ação
+                </th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td id="id">@item.ProdutoId</td>
+                <td id="nome">@item.Nome</td>
+                <td id="preco">@item.Preco</td>
+                <td id="descricao">@item.Descricao</td>
+                <td>
+                    <a href="#" onclick="return getbyID(@item.ProdutoId)">Editar</a> 
+                    | <a href="#" onclick="Delete(@item.ProdutoId)">Excluir</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title" id="myModalLabel">Adicionar produto</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="ProdutoId">ID</label>
+                        <input type="text" class="form-control" id="ProdutoId" placeholder="Id" disabled="disabled" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Nome">Nome</label>
+                        <input type="text" class="form-control" id="Nome" placeholder="Nome" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Preco">Preço</label>
+                        <input type="text" class="form-control" id="Preco" placeholder="Preço" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Descricao">Descrição</label>
+                        <input type="text" class="form-control" id="Descricao" placeholder="Descrição" />
+                    </div>
+                    <div class="form-group">
+                        <label for="Categoria">Categoria</label>
+                        <select class="form-control" id="Categoria">
+                            <option value="" selected></option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnAdd" onclick="return Add();">Adicionar</button>
+                <button type="button" class="btn btn-primary" id="btnUpdate" style="display:none;" onclick="Update();">Editar</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
